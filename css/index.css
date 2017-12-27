@@ -1,0 +1,39 @@
+body{
+    background-color: #ecf0f1;
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ecf0f1;
+    color: white;
+    text-align: center;
+    height: 100px;
+}
+
+#dominos-banner{
+    background-image: url("/images/banner_image.jpg");
+}
+
+#banner-text{
+    font-family: 'Anton', sans-serif;
+    -webkit-text-fill-color: #ecf0f1;
+    font-size: 48px;
+    align-content: center;
+    top: 30%;
+    left: 10%;
+    right:10%;
+    position: absolute;
+    text-shadow: 1px 1px 15px black;
+}
+
+#banner-tile{
+    opacity: 0.8;
+    width: 800px;
+    margin:0 auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+}

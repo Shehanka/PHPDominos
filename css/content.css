@@ -1,0 +1,11 @@
+#content{
+    width: 80%;
+    height: 100px;
+    float: right;
+}
+
+#content-items{
+    background-color: #3498db;
+    width: 100%;
+    height: 600px;
+}

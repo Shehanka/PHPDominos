@@ -1,0 +1,8 @@
+#sideNav{
+    background-color: #3498db;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    float: left;
+    opacity: 0.9;
+}

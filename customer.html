@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dominos SriLanka | Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/css/uikit.min.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit-icons.min.js"></script>
+
+    <link rel="stylesheet" href="css/sideNav.css">
+    <link rel="stylesheet" href="css/content.css">
+
+</head>
+<body>
+
+<!--Header-->
+<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-navbar-primary" uk-navbar style="position: relative; z-index: 980;">
+        <div class="uk-animation-fade">
+            <a class="uk-navbar-item uk-logo" href="#">
+                <img src="https://inspiredbusinessmedia.co.uk/wp-content/uploads/2017/06/YwKD6RHVpZQtF1tB.png" width="180" height="30">
+            </a>
+        </div>
+
+        <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active">
+                    <a href="#">
+                        <i class="fa fa-thumbtack"></i>
+                        Location
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">Menu</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Review & Pay</a></li>
+                <li><a href="#">Track</a></li>
+            </ul>
+        </div>
+
+        <div class="uk-navbar-right">
+            <div class="uk-animation-scale-down">
+                <button onclick="logOut()" class="uk-button uk-button-danger" href="#modal-log-out" uk-toggle>Log Out</button>
+            </div>
+        </div>
+        <div style="width: 30px"></div>
+    </nav>
+</div>
+<!--End Header-->
+
+<!--Side Nav-->
+<div id="sideNav" class="uk-tile-primary">
+
+    <!--Menu Items-->
+    <div style="padding-left: 20px">
+        <div style="height: 30px"> </div>
+
+        <!--<div class="uk-child-width-1-2@s" uk-grid>-->
+            <!--<div>-->
+                <!--<ul class="uk-tab-right" uk-tab>-->
+                    <!--<li class="uk-active">-->
+                        <!--<a href="#">-->
+                            <!--Home-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="customer.html">-->
+                            <!--Customers-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li><a href="#">Items</a></li>-->
+
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="uk-width-1-2@s uk-width-2-5@m">
+            <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                <li class="uk-active"><a href="admin.html">Home</a></li>
+                <li class="uk-parent">
+                    <a href="customer.html">Customer</a>
+                    <ul class="uk-nav-sub">
+                        <li><a href="#">Sub item</a></li>
+                        <li>
+                            <a href="#">Sub item</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                    <a href="#">Items</a>
+                    <ul class="uk-nav-sub">
+                        <li><a href="#">Sub item</a></li>
+                        <li><a href="#">Sub item</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+    <!--End Menu Items-->
+
+</div>
+<!--End side nav-->
+
+<!--Content-->
+<div id="content">
+    <div id="content-items" class="uk-tile-primary">
+
+        <div class="uk-tile" style="background-color: #2980b9;height: 180px;">
+            <form>
+                <div class="uk-grid">
+                    <div class="uk-width-1-1">
+                        <input class="uk-input uk-form-width-small" type="text" placeholder="Customer ID">
+                        <input class="uk-input uk-form-width-medium" type="text" placeholder="Customer Name">
+                        <input class="uk-input uk-form-width-large" type="text" placeholder="Customer Address">
+                        <input class="uk-input uk-form-width-small" type="text" placeholder="Tel No">
+                    </div>
+                    <br><br>
+                    <div class="uk-width-1-1" style="padding-left: 30%">
+                        <button class="uk-button uk-button-secondary">Search</button>
+                        <button class="uk-button uk-button-secondary">Add</button>
+                        <button class="uk-button uk-button-secondary">Update</button>
+                        <button class="uk-button uk-button-danger"  uk-toggle>Delete</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <br>
+        <!--Table-->
+        <div class="uk-overflow-auto">
+            <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+                <thead>
+                <tr>
+                    <th class="uk-table-shrink"></th>
+                    <th class="uk-table-shrink">Profile</th>
+                    <th class="uk-table-shrink">Name</th>
+                    <th class="uk-table-shrink uk-text-nowrap">Tel No</th>
+                    <th class="uk-width-expand">Address</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input class="uk-checkbox" type="checkbox"></td>
+                        <td>
+                            <img class="uk-preserve-width uk-border-circle" width="40"
+                                 src="images/chamodshehanka.jpg">
+                        </td>
+                        <td class="uk-text-nowrap">Chamod Shehanka</td>
+                        <td class="uk-text-nowrap">077 56 33985</td>
+                        <td class="uk-table-link">
+                            <a class="uk-link-reset" href="">
+                                "Priyankara", Weniwelpitiya, Haltota
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="uk-checkbox" type="checkbox"></td>
+                        <td>
+                            <img class="uk-preserve-width uk-border-circle" width="40"
+                                 src="images/amandaCerny.jpg">
+                        </td>
+                        <td class="uk-text-nowrap">Amanda Cerny</td>
+                        <td class="uk-text-nowrap">011111111</td>
+                        <td class="uk-table-link">
+                            <a class="uk-link-reset" href="">
+                                Elite Park, NewYork, USA
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="uk-checkbox" type="checkbox"></td>
+                        <td>
+                            <img class="uk-preserve-width uk-border-circle" width="40" height="50"
+                                 src="images/kygo.jpg">
+                        </td>
+                        <td class="uk-text-nowrap">Kygo</td>
+                        <td class="uk-text-nowrap">011111111</td>
+                        <td class="uk-table-link">
+                            <a class="uk-link-reset" href="">
+                                1095 South Monaco Pky Denver, CO 80224
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--End table-->
+        </div>
+
+
+    </div>
+</div>
+<!--End Content-->
+
+<footer class="footer uk-grid">
+    <div class="uk-width-1-3">
+        <div style="height: 10px"></div>
+        <p style="-webkit-text-fill-color: #7f8c8d;font-size: 14px">
+            *Conditions apply *For more details,<br> please refer to the disclaimer section.
+        </p>
+    </div>
+
+    <div class="uk-width-3-10">
+        <p>
+            te
+        </p>
+    </div>
+    <div class="uk-width-3-10"></div>
+    <div class="uk-width-3-10"></div>
+</footer>
+
+<script>
+    function logOut() {location.replace("index.html");
+        UIkit.modal.confirm("Are you sure?", function(){
+            location.replace("index.html");
+        });
+    }
+</script>
+
+</body>
+</html>
