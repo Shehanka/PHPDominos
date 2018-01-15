@@ -936,26 +936,84 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="238" parent="3" name="user">
+    <table id="238" parent="3" name="customer">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="239" parent="238" name="userName">
+    <table id="239" parent="3" name="items">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="240" parent="3" name="user">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="241" parent="238" name="customer_ID">
       <Position>1</Position>
       <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="238" name="password">
+    <column id="242" parent="238" name="customer_Name">
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="238" name="userType">
+    <column id="243" parent="238" name="customer_Address">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="244" parent="238" name="customer_Tel">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="245" parent="238" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>customer_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="246" parent="239" name="code">
+      <Position>1</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="247" parent="239" name="description">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="248" parent="239" name="unitPrice">
+      <Position>3</Position>
+      <DataType>decimal(10,2)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="249" parent="239" name="qty_on_hand">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="250" parent="239" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="251" parent="240" name="userName">
+      <Position>1</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="252" parent="240" name="password">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="253" parent="240" name="userType">
       <Position>3</Position>
       <DataType>varchar(5)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="242" parent="238" name="PRIMARY">
+    <key id="254" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userName</ColNames>
       <Primary>1</Primary>

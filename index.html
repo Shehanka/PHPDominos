@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit-icons.min.js"></script>
@@ -68,8 +69,36 @@
     <!--Tile-->
     <div style="padding-top: 200px;">
         <div id="banner-tile" class="uk-card uk-card-primary uk-card-body">
-            <h3 class="uk-card-title">Primary</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h3 class="uk-card-title">Select Location</h3>
+            <div class="uk-margin">
+                <!--<input class="uk-input" type="text" placeholder="Search Location">-->
+
+                <div class="uk-grid">
+                    <div class="uk-width-1-1">
+                        <div class="uk-margin">
+                            <select id="cmb-main-city" class="uk-select uk-form-width-small" placeholder="Main City">
+                                <option>Colombo</option>
+                                 <option>Horana</option>
+                            </select>
+                            <select id="cmb-city" class="uk-select uk-form-width-medium" placeholder="City">
+                                <option>Fort</option>
+                                <option>Slave Island</option>
+                                <option>Babalapitiya</option>
+                                <option>Havelock Town</option>
+                                <option>Wellawatta</option>
+                                <option>Cinnamon Garden</option>
+                            </select>
+
+                            <select id="cmb-street" class="uk-select uk-form-width-small" placeholder="Main Street">
+                                <option>Street 1</option>
+                            </select>
+
+                            <button id="btn-build-order" class="uk-button uk-button-secondary">Build Your Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!--End Tile-->
@@ -168,5 +197,6 @@
     <div class="uk-width-3-10"></div>
 </footer>
 
+<script src="js/index.js"></script>
 </body>
 </html>

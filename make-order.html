@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dominos SriLanka | Make Order</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--End Bootstrap-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/css/uikit.min.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit-icons.min.js"></script>
+
+    <link rel="stylesheet" href="css/sideNav.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/make-order.css">
+
+</head>
+<body>
+
+<!--Header-->
+<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-navbar-primary" uk-navbar style="position: relative; z-index: 980;">
+        <div class="uk-animation-fade">
+            <a class="uk-navbar-item uk-logo" href="#">
+                <img src="https://inspiredbusinessmedia.co.uk/wp-content/uploads/2017/06/YwKD6RHVpZQtF1tB.png" width="180" height="30">
+            </a>
+        </div>
+
+        <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active">
+                    <a href="#">
+                        <i class="fa fa-thumbtack"></i>
+                        Location
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">Menu</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Review & Pay</a></li>
+                <li><a href="#">Track</a></li>
+            </ul>
+        </div>
+
+        <div class="uk-navbar-right">
+            <div class="uk-animation-scale-down">
+                <button onclick="logOut()" class="uk-button uk-button-danger" href="#modal-log-out" uk-toggle>Log Out</button>
+            </div>
+        </div>
+        <div style="width: 30px"></div>
+    </nav>
+</div>
+<!--End Header-->
+
+<!--OrderHeader-->
+<div id="order-header">
+
+    <div id="order-header-content">
+        <div class="row">
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-4">
+                <p class="uk-text-lead" style="-webkit-text-fill-color: #ecf0f1">Total : 1200.00</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--End OrderHeader-->
+
+<!--Side Nav-->
+<div id="sideNav" class="uk-tile-primary">
+
+    <!--Menu Items-->
+    <div style="padding-left: 20px">
+        <div style="height: 70px"> </div>
+
+        <div class="uk-width-1-2@s uk-width-2-5@m">
+            <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                <li class="uk-active"><a href="admin.html">Home</a></li>
+                <li class="uk-parent">
+                    <a href="customer.html">Customer</a>
+                    <ul class="uk-nav-sub">
+                        <li><a href="#">Sub item</a></li>
+                        <li>
+                            <a href="#">Sub item</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="uk-parent">
+                    <a href="#">Items</a>
+                    <ul class="uk-nav-sub">
+                        <li><a href="#">Sub item</a></li>
+                        <li><a href="#">Sub item</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+    <!--End Menu Items-->
+
+</div>
+<!--End side nav-->
+
+<!--Content-->
+<div id="content">
+    <div id="content-items" class="uk-tile-primary">
+
+        <!--style="background-color: #2980b9;"-->
+
+        <div class="uk-tile uk-tile-primary" >
+            <form>
+                <div class="uk-grid">
+                    <div class="uk-width-1-1">
+                        <input id="txtOrderDate" class="uk-input uk-form-width-small" type="text" placeholder="Order Date">
+                        <input class="uk-input uk-form-width-small" type="text" placeholder="Customer ID">
+                        <input class="uk-input uk-form-width-small" type="text" placeholder="Customer Name">
+                        <input class="uk-input uk-form-width-large" type="text" placeholder="Customer Address">
+                        <button class="uk-button uk-button-secondary">Add</button>
+                    </div>
+
+                    <br>
+                    <hr class="uk-divider-icon" style="width: 100%;height: 30px">
+                    <br>
+
+                    <div class="uk-width-1-1">
+                        <input class="uk-input uk-form-width-small" type="text" placeholder="Item Code">
+                        <input class="uk-input uk-form-width-medium" type="text" placeholder="Item Description">
+                        <input class="uk-input uk-form-width-small" type="text" placeholder="Unit Price">
+                        <input class="uk-input uk-form-width-small" type="text" placeholder="Quantity">
+                        <button class="uk-button uk-button-primary" uk-toggle="target: #modal-customize">Customize Item</button>
+                        <button class="uk-button uk-button-secondary">Add to List</button>
+                    </div>
+
+                    <br>
+                    <hr class="uk-divider-icon" style="width: 100%;height: 30px">
+
+                    <div class="uk-width-1-3">
+                        <p class="uk-text-lead" style="float: left">Amount : 1000 </p>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div class="uk-width-1-1 uk-tile " style="width: 100%;">
+
+            <!--Table-->
+            <div class="uk-overflow-auto">
+                <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+                    <thead>
+                    <tr>
+                        <th class="uk-table-shrink"></th>
+                        <th class="uk-table-shrink">Code</th>
+                        <th class="uk-table-shrink">Description</th>
+                        <th class="uk-table-shrink">Unit Price</th>
+                        <th class="uk-table-shrink uk-text-nowrap">QTY</th>
+                        <th class="uk-width-expand">Amount</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td><input class="uk-checkbox" type="checkbox"></td>
+                        <td>I001</td>
+                        <td>
+                            Milo
+                        </td>
+                        <td class="uk-text-nowrap">50 LKR</td>
+                        <td class="uk-text-nowrap">70</td>
+                        <td class="uk-table-link">
+                            3500 LKR
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!--End table-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Content-->
+
+<!--Customize Item-->
+<div id="modal-customize" uk-modal>
+    <div class="uk-modal-full">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 id="item-description" class="uk-modal-title">Item Description</h2>
+        </div>
+        <div class="uk-modal-body">
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <a class="uk-thumbnail" href=""><img src="images/Non-vegExtravaganza.jpg" alt=""></a>
+                </div>
+                <div class="col-sm-7 uk-tile uk-tile-primary">
+                    <div class="uk-width-1-1">
+                        <input class="uk-input uk-form-width-small" type="text" placeholder="Item Code"><br>
+                        <input class="uk-input uk-form-width-medium" type="text" placeholder="Item Description">
+                        <input class="uk-input uk-form-width-small" type="text" placeholder="Unit Price">
+                        <input class="uk-input uk-form-width-small" type="text" placeholder="Quantity">
+                        <button class="uk-button uk-button-secondary">Add to List</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="button">Save</button>
+        </div>
+    </div>
+</div>
+<!--End customize item-->
+
+<!--<footer class="footer uk-grid">
+    <div class="uk-width-1-3">
+        <div style="height: 10px"></div>
+        <p style="-webkit-text-fill-color: #7f8c8d;font-size: 14px">
+            *Conditions apply *For more details,<br> please refer to the disclaimer section.
+        </p>
+    </div>
+
+    <div class="uk-width-3-10">
+        <p style="-webkit-text-fill-color: #7f8c8d;font-size: 14px">
+            *Conditions apply *For more details,<br> please refer to the disclaimer section.
+        </p>
+    </div>
+    <div class="uk-width-3-10"></div>
+    <div class="uk-width-3-10"></div>
+</footer>-->
+
+<script>
+    function logOut() {location.replace("index.html");
+        UIkit.modal.confirm("Are you sure?", function(){
+            location.replace("index.html");
+        });
+    }
+</script>
+<script src="js/make-order.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+#order-header{
+    background-color: #e81123;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 9;
+    opacity: 0.9;
+}
+
+#order-header-content{
+    padding-top: 10px;
+}
+

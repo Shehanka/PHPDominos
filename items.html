@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit-icons.min.js"></script>
@@ -75,8 +74,10 @@
                 <li class="uk-parent">
                     <a href="customer.html">Customer</a>
                     <ul class="uk-nav-sub">
-                        <li><a href="#">Manage</a></li>
-
+                        <li><a href="#">Sub item</a></li>
+                        <li>
+                            <a href="#">Sub item</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="uk-parent">
@@ -101,20 +102,20 @@
     <div id="content-items" class="uk-tile-primary">
 
         <div class="uk-tile" style="background-color: #2980b9;height: 180px;">
-            <form id="formCustomer">
+            <form>
                 <div class="uk-grid">
                     <div class="uk-width-1-1">
-                        <input id="customer_ID" name="txtCustomer_ID" class="uk-input uk-form-width-small" type="text" placeholder="Customer ID">
-                        <input name="txtCustomer_Name" class="uk-input uk-form-width-medium" type="text" placeholder="Customer Name">
-                        <input name="txtCustomer_Address" class="uk-input uk-form-width-large" type="text" placeholder="Customer Address">
-                        <input name="txtCustomer_Tel" class="uk-input uk-form-width-small" type="text" placeholder="Tel No">
+                        <input class="uk-input uk-form-width-small" type="text" placeholder="Item Code">
+                        <input class="uk-input uk-form-width-large" type="text" placeholder="Item Description">
+                        <input class="uk-input uk-form-width-medium" type="text" placeholder="Unit Price">
+                        <input class="uk-input uk-form-width-small" type="text" placeholder="QTY on hand">
                     </div>
                     <br><br>
                     <div class="uk-width-1-1" style="padding-left: 30%">
-                        <button id="btnSearch" class="uk-button uk-button-secondary">Search</button>
-                        <button id="btnSave" class="uk-button uk-button-secondary">Add</button>
-                        <button id="btnUpdate" class="uk-button uk-button-secondary">Update</button>
-                        <button id="btnDelete" class="uk-button uk-button-danger"  uk-toggle>Delete</button>
+                        <button class="uk-button uk-button-secondary">Search</button>
+                        <button class="uk-button uk-button-secondary">Add</button>
+                        <button class="uk-button uk-button-secondary">Update</button>
+                        <button class="uk-button uk-button-danger">Delete</button>
                     </div>
                 </div>
             </form>
@@ -126,14 +127,14 @@
                 <thead>
                 <tr>
                     <th class="uk-table-shrink"></th>
-                    <th class="uk-table-shrink">Profile</th>
-                    <th class="uk-table-shrink">Name</th>
-                    <th class="uk-table-shrink uk-text-nowrap">Tel No</th>
-                    <th class="uk-width-expand">Address</th>
+                    <th class="uk-table-shrink">Item Code</th>
+                    <th class="uk-table-shrink">Description</th>
+                    <th class="uk-table-shrink uk-text-nowrap">Unit Price</th>
+                    <th class="uk-width-expand">Qty on hand</th>
                 </tr>
                 </thead>
-                <tbody id="tblCustomer">
-<!--                    <tr>
+                <tbody>
+                    <tr>
                         <td><input class="uk-checkbox" type="checkbox"></td>
                         <td>
                             <img class="uk-preserve-width uk-border-circle" width="40"
@@ -176,7 +177,7 @@
                                 1095 South Monaco Pky Denver, CO 80224
                             </a>
                         </td>
-                    </tr>-->
+                    </tr>
                 </tbody>
             </table>
             <!--End table-->
@@ -211,7 +212,6 @@
         });
     }
 </script>
-<script src="js/customerAjax.js"></script>
 
 </body>
 </html>
