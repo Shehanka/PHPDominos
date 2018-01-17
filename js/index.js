@@ -4,5 +4,12 @@ $("#btn-build-order").click(
         var city = $('#cmb-city').val();
         var street = $('#cmb-street').val();
         console.log(mainCity,city,street);
+
+        if(mainCity != null && city != null && street != null){
+            window.location.assign("menu.html")
+        }else {
+
+        }
+
     }
 );

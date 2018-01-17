@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dominos SriLanka | Menu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-grid-only@1.0.0/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/css/uikit.min.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/js/uikit-icons.min.js"></script>
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+<!--Header-->
+<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-navbar-primary" uk-navbar style="position: relative; z-index: 980;">
+        <div class="uk-animation-fade">
+            <a class="uk-navbar-item uk-logo" href="#">
+                <img src="https://inspiredbusinessmedia.co.uk/wp-content/uploads/2017/06/YwKD6RHVpZQtF1tB.png" width="180" height="30">
+            </a>
+        </div>
+
+        <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active">
+                    <a href="#">
+                        <i class="fa fa-thumbtack"></i>
+                        Location
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">Menu</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Review & Pay</a></li>
+                <li><a href="#">Track</a></li>
+            </ul>
+        </div>
+
+        <div class="uk-navbar-right">
+            <div class="uk-animation-scale-down">
+                <button onclick="logOut()" class="uk-button uk-button-danger" href="#modal-log-out" uk-toggle>Log Out</button>
+            </div>
+        </div>
+        <div style="width: 30px"></div>
+    </nav>
+</div>
+<!--End Header-->
+
+<!--Delivery Address Header-->
+<div class="delivery-address-header">
+    <p style="padding-left: 100px;padding-top: 5px;-webkit-text-fill-color: #2980b9">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANNSURBVFhH7ZjrS1NxHMZ9279Qht10m3ktcm7Upu3iLLVWarXMzLxjpExbpFmSty5khZVUsmVOk7yg5jbPmq4rZlKQQWCWUBQopS2n2yh4Oke2XkxG6qhRnA88b76cw+/D98dzYPOiofmX0b2xrNG/+z7oMqPfJfZHPQMxYgskRZCvMaHMOAXu1TEoX1iQ0PgF1JwY+SGzP+oZHIKnH5pxZWAGae2TaH5lhaLnm+cFqwdsqbWDtrLW1zajq9x4YblY/dSqsL/ydxAwlBFiX1XYhafWl6ceWLC/zYRczRQKCTOkjRNwnl0YsMH+6p+FEhP5KY0ihgpbWA3FFZ2fLef6rSglhcofWVH1xILjfTNwnv1xQSFTGe4QkzDrERughphVj7LWMZw0ziChaRLpHSYc1pohUn6eM6MEvb3zlyxjlEey2Jei10Wq1jsStKl+pf2YxSPyU6klpFBiSAvEzJugRPP57ahoG8cZckMKvRkl5Oaoq83TmefMZgVXFgcuXV0C39DzCOErfyWYr1Tbj1kcaWEa76T17cMZHA2Oxd7DnnVNSGU3I4vbgnJSkLrGrK5vKOgxo6h3GsmtpjkzSnB1SLXBx7/iAzOs5u0GUYPREbbkdiNP2qXYGKfxtx85f0gpQQZHa83kakHlxHYDdgapISMlkzfcRhkpON+SUNujEsCpBV/aPSe8Hd0L/xylh+tklFhdVj8Ko/RoLniGTM4dKDZ3oDS6e/aK51sSRuhpxCQ2YtfBDsiyjSg5+xwxyQTySvrdFywU6ZGzqQdyMYHYtbewI6gB8cHqBZVkOaMUjOAqsIVKiHdpsS1FD0G8FjH7CPcFa1IeQy4kUJfTjwNhzTjMa4dC0LGgkvgGV0IQp8L2pBYkZBggLx3A1r0Eso88dl+wIv4+8iIJnJXdX3RJVq0tBzviMkTSptntpckfImq3Dkm5RvcFj8f24VBEj1sl8WGdQlB4NXhb6mc3J8vugzBRi51pBrokdElcQpeELgldkt9Al4QuCV2S30CX5L8vSUa4TkL+sht0JIXdORTNujXtyNGakR/FvdNDcQ0Tn5Jbv47m3J0a5l8fn3CeFbV9tK3wr5ymEsi99p4n7R50Dl9617N/09HQuMTL6ydhsgQnkjtcEwAAAABJRU5ErkJggg==">
+        <b>Delivery Address :</b>
+    </p>
+</div>
+<!--End Delivery Address Header-->
+
+<!--Details Header-->
+<div class="details-banner">
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-md-2" style="padding-top: 18px;background-color: #e74c3c;height: 42px;">
+            <div style="padding-left: 15px">
+                <h5 class="details-banner-text">
+                    <b>EVERYDAY VALUE OFFERS</b>
+                </h5>
+            </div>
+        </div>
+
+        <div class="col-sm-1" style="padding-top: 16px">
+            <div style="padding-left: 5px">
+                <h5 class="details-banner-text">
+                    <b>PIZZA</b>
+                    <img width="30px" height="30px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATYSURBVFhH7Zd/TFVlGMcPAinNJVl/pCNH44ejlCLUEIQLXvnhDe6ViY4Fg13lDwlXa4zZwnJSRqS5lSG/HDCFOwMCaViGLrwkuUC8JRdaGdNZTWKVqwlNkPfb8x7ec4Q4/cH1XuiP+92+45z3nPO8n/u8vx4kt9xyy8VitQ9eY5Weg6xc2sfKpCDR/P8Qq/IORbkExQQ5QW5iFdJa8cr8itUvPTkVcKoJtBVlkr94dX7Eqhfd1oJTTEM+QqB7UCF5i0/mTrio82enVkygcoEm3FQTaA+rlJ4Qn86NYDe+in4TYEsCTgcBVZ6acIopk3+wo1K0+Ny1AiQP1m+6Clsy0BQJfBQBdMXR9XJNOMUEOUrZNIgwrhMb2KJDcxRgXAREU+fcCV7AsWeBznWUTW9NQG4xL58ToVwj1h7bjHgCUuAU6zyA1g3A5QSg/mFNQG6CHKY56SfCOVewmXxZUcD4DDjFeY9Bnpt9NPwNdK0ByE2QVuyTFoiwzhMbML2IfD9tOO4XlkwCctuNQMsKTUBuGuocEdZ5YnZTLw6GaMNxc3iCu3E2Cd0WPf7qfh5o1M4kH2rUSL4i9P2L9RvD5Mz0GIAUn5lwetpqvtDjZHEUYkMCER8aBOO6lfixTf+fc5Ig3xfh71/MbixVh69jE2B+5B5c2mJ5gYz2piAuJADtZTrc7TOhMDsMhVlhQG88rfKZq5sA79BQLxNdOC52I82HMnhLBVT8VSLwJa1acf/bBQNiVgbgahu1033laxHYnRo6+dy6dgagDFkuHRTdOC7KXgbvZOxbI4Y7aYgF0DhlafBrA7o7E/HzJZpv1Ja//Wlsjw5BUU449KsCcfqDGLl95AotGo3NnLJ4Cx9Ki0VXjolW5HlrdRySngmSM7QjcZUMer3bgF01EaobPtuIv20pqHszEiV5a9BJ3/z5TQrKTumQW7seQ10boXV+UxZzRVezF7OnBN6xGRmHq3ljPX46txl5ptU4sCscE3YT9lqipkF+d3GzmmHuksZo9VlfF53dbXR2/xuwyvN70d3sRedu8ZB1cm7x7YN3enx/JHKNq+Xra5TFvZYNKsTHZyhLAm74crLazn2dbzs2mp8V07PIK3PR3eyEDp0X7X2/kGFOeErOHIdLXhOME0VUKAgQ+hH4nYaWD6fSxj106R7g4aYY+T35fSrVWPXCEVbn28IqvByvwGlxGJXO+Jzjw8ozx+H4NqI8u92TCsuBLLQfzVDbuOl7lLbo0H5uk7ygeBVEP3YPuxAZwKsi0Y3jooCtcmeUQZyJpQ2XqhX+l98rIHRteSsb7720E82HsvCrdSsa381CacEO2BrSOeQoxamjbYqWsxOgFLGB1GUUeFzelDN9p58aOx+l0oo2XwK8eT5NhuMuLTDj8MuT1zWvZ498XppRj8FtS0RI50qumntpUps0jjXu9Idowifjh7ZtKiCHaz6UeaWjKiNThHGN1Kr5CK1ULTjFteEYsm5lR/LNYyeKss62H0tfLkK4VnLVzOdXwePaYGRmWHiXvRP8CevbEiA+mzvxSS0D7qfFNhUsxgPMvPQmK/R/Gw1PPiBen1vJVTOtPBmwhf734Nky+YyxV/w+ZcWBYeK1+ZNcNROcuj2UBOe4pDx3VARVSefvbpdtD2655ZazJEn/APmH+9ZXWOe4AAAAAElFTkSuQmCC">
+                </h5>
+            </div>
+        </div>
+
+        <div class="col-sm-1" style="padding-top: 16px">
+            <div style="">
+                <h5 class="details-banner-text" style="float: left">
+                    <b>SIDES</b>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKRSURBVEhL3ZLvS5NRFMev0V/Qy4jYijDS0Q9CIciZ/aDoRWBW9NItkGoWS0on5XZHuqBXRm9MKAI1gpSmUhiERfXGGi5Indp+CBFESjMxss17uud69rDag+wJHqm+8IVzz7nn832ePWP/nMRDVoim48oIgBVAH3umLGtqmy8RZCdlKKCxpra5gkG2WvSyCS0Ya9mjsXkS/WxPJlQLlz0amyf5hhdUYCcZg3uZm8bmCfrZNtHNFmfdDNBYiz62lcbmSoZVzZwv+IDGmtoro4aqg51oOpovUcZ3g92XhHIOaGH3TYsK7w4amycZ1JwJ1cLLffU0Nk8yJPB7MNh5A43N0/8dDOBdJab4fhHnfpHg3SLhHxNj/jkY8QPEyLIWEf5VzfAO3pU7uEsYYxJT3rUi7g9BQsKlU0+vwJzHreqMX7pvw3wooOprwUcw+vamNsNdZBAuf8knb89A0IthH3zv8Kg6ca8VvoVb4P2dG5CKXFW9gVd3YXr8unYfjQzC5a90jI9kQ7L9uukWzAzKkCiH9JBX9w46HeWThMtfH1/UVQr8hjrAjH8EG+HLMZfuDOIckqFLNYQzpsCJ0vTCeJM+eBl/HroILcdL0oQxLkex5VNX42EFk98LJh+7YCGS+yDRgVqYf3d5qX5SC6d3bgLcJYxxOWzW0XO7NoOIcRi+fwqcNiu0ndn7S+ibLqfq19mLoKP+ELhKC9UZdwljXM5i63OEBAOV0OosU8Ca7RshObz078ZfofloiernWO4SxrgkoCcHKN12tgJmwx54wI/kzLLcQxjjkt+pXQeYl3GXMMblsFkCetB8jLuEMS5HkeWAfPKUHng54061zbqPMH8m55Z1a6pt6zcYMe7Q+t8mxn4CzWbfq0X2UsEAAAAASUVORK5CYII=">
+                </h5>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+
+        </div>
+
+        <div class="col-md-3" style="padding-left: 100px;padding-top: 10px">
+            <button class="uk-button uk-button-primary" href="#quick-view" uk-toggle>QUICK VIEW</button>
+            <button class="uk-button uk-button-secondary">CHECKOUT</button>
+        </div>
+    </div>
+</div>
+<!--End Details Header-->
+
+
+
+<!--Quick View-->
+<div id="quick-view" class="uk-modal-container" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h2 class="uk-modal-title">QUICK VIEW</h2>
+
+            <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+                <thead>
+                    <tr>
+                        <th class="uk-table-shrink">Product</th>
+                        <th class="uk-table-shrink">Description</th>
+                        <th class="uk-table-shrink"></th>
+                        <th class="uk-table-shrink uk-text-nowrap">QTY</th>
+                        <th class="uk-width-expand">Sub Total (Rs)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <img class="uk-preserve-width uk-border-circle" width="80"
+                                 src="images/Non-vegExtravaganza.jpg">
+                        </td>
+                        <td class="uk-text-nowrap">Non - Veg Extravaganza</td>
+                        <td>
+                            <button class="uk-button uk-button-danger">
+                                REMOVE
+                            </button>
+                        </td>
+                        <td class="uk-text-nowrap">1</td>
+                        <td class="uk-table-link">
+                            <a class="uk-link-reset" href="">790</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        <div class="uk-tile uk-tile-primary" style="width: 100%;">
+
+            <div class="row">
+                <div class="col-md-6">
+                    (You can use your Promo Codes during payment)
+                    <br><br>
+                    1 ITEM(S) IN YOUR CART
+                </div>
+
+                <div class="col-md-6">
+                    <h5 id="net-price">Net Price : </h5>
+                    <h5 id="delivery-charge">Delivery Charges : </h5>
+                    <h4 id="grand-total">GRAND TOTAL : </h4>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!--End Quick View-->
+
+<script src="js/menuController.js"></script>
+
+</body>
+</html>
