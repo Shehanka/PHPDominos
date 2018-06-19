@@ -1,7 +1,7 @@
 window.onload =(function () {
     var httpCustomerViewRequest = new XMLHttpRequest();
     httpCustomerViewRequest.onreadystatechange = function (ev) {
-        if (httpCustomerViewRequest.readyState == 4 && httpCustomerViewRequest.status == 200) {
+        if (httpCustomerViewRequest.readyState === 4 && httpCustomerViewRequest.status === 200) {
             var customers = JSON.parse(httpCustomerViewRequest.responseText);
             for (var i = 0; i < customers.length; i++) {
                 $("#tblCustomer").append('<tr>' +

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="63604001-7c79-4da1-93d2-4e024571469b" name="Apache Server" url="http://localhost/playground">
+      <webServer id="63604001-7c79-4da1-93d2-4e024571469b" name="Apache Server (project level)" url="http://localhost/playground">
         <fileTransfer port="0" mountedRoot="C:\wamp64\www\playground" accessType="MOUNT" />
       </webServer>
     </option>
