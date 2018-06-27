@@ -24,6 +24,8 @@ if ($connection){
                 header("Location: http://www.google.com");
             }else if ($type === 'cust'){
                 header("Location: customer-menu.html");
+            }else {
+                echo 'Invalid type!!!';
             }
         }
     }
