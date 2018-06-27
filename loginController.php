@@ -23,7 +23,7 @@ if ($connection){
             }else if ($type === 'chef'){
                 header("Location: http://www.google.com");
             }else if ($type === 'customer'){
-                header("Location: customer-dash.html");
+                header("Location: customer-menu.html");
             }
         }
     }
