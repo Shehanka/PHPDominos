@@ -182,8 +182,6 @@
             </table>
             <!--End table-->
         </div>
-
-
     </div>
 </div>
 <!--End Content-->
@@ -206,7 +204,8 @@
 </footer>
 
 <script>
-    function logOut() {location.replace("index.html");
+    function logOut() {
+        location.replace("index.html");
         UIkit.modal.confirm("Are you sure?", function(){
             location.replace("index.html");
         });
